@@ -1,23 +1,21 @@
 # Project-NLP-Business-Case-Automated-Customer-Reviews
 
-#Steps
+# Steps
 01 Read the dataset and clean data
 02  Categorize data into categories 
 (positive, negative, neutral)
 03  use pretrined models Bert model triean model And Model Evaluation 
 04 Deployment
 
-#Task 1
-#Classification
-#1️⃣ Sentiment Classification (BERT-based)
+# Task 1 Classification
+
+# 1️⃣ Sentiment Classification (BERT-based)
 In this part, we built a sentiment classification model using a pre-trained BERT model fine-tuned on our dataset.
 The dataset was balanced into three sentiment categories:
 
-Positive
+Positive - Neutral - Negative
 
-Neutral
 
-Negative
 
 📊 Evaluation Results:
 Class	Precision	Recall	F1-Score	Support
@@ -27,8 +25,12 @@ POSITIVE	0.902	0.954	0.928	2027
 ✅ Overall Accuracy: 0.91
 
 ✅ The model showed high accuracy, particularly in detecting Positive and Negative sentiments.
- #Task2
-#2️⃣Clustering (KMeans, PCA, t-SNE)
+
+
+
+
+ # Task2
+# 2️⃣Clustering (KMeans, PCA, t-SNE)
 We applied clustering techniques on the text embeddings (extracted using BERT) to discover natural groupings within the data.
 
 📊 KMeans Clustering (with PCA)
@@ -49,17 +51,21 @@ Calinski-Harabasz Index: 895.547
 We used PCA and t-SNE to reduce the embeddings to 2D and visualize clusters. Each cluster was labeled and color-coded, revealing natural data structure and overlaps between categories.
 
 
-#Task3
-#3️⃣ Summarization (AI-based)
+# Task3
+# 3️⃣ Summarization (AI-based)
 We generated automatic summaries for customer reviews using a transformer-based summarization model. The summaries captured the key points in customer feedback in a short, coherent format — useful for management and quick insights.
 
 
-#Task4
+
+
+
+
+
+# Task4
 🚀 Flask Deployment & Running the App
 📂 Folder Structure:
 swift
-نسخ
-تحرير
+
 /project/
  ├── model/
  │    └── bert_sentiment_model/
@@ -71,8 +77,9 @@ swift
  └── requirements.txt
 📝 Example app.py
 python
-نسخ
-تحرير
+
+
+
 from flask import Flask, request, render_template
 from transformers import BertTokenizer, BertForSequenceClassification
 import torch
@@ -102,18 +109,20 @@ if __name__ == '__main__':
 Install dependencies:
 
 bash
-نسخ
-تحرير
+
 pip install -r requirements.txt
 Run the app:
 
 bash
-نسخ
-تحرير
-python app.py
-Open your browser and go to: http://127.0.0.1:5000/
 
-#✅ Conclusion:
+ # Run App
+python app.py
+
+
+
+
+
+# ✅ Conclusion:
 The project successfully combined:
 
 Deep learning-based sentiment classification
